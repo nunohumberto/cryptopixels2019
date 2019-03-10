@@ -31,13 +31,8 @@ def crack_header(): # This method calculates a hash for a token header with a va
 	ba.append(0x00)
 	ba.append(0x00)
 
-
-	found = False
-
 	sys.stdout.write("Searching for a valid header hash... ")
 	for i in range(256):
-		if found:
-			break
 		for j in range(256):
 			h = hashlib.sha256()
 			ba[6] = i
